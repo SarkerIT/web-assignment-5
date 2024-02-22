@@ -44,6 +44,10 @@ for (const seat of allSeat) {
 
     // call update seat num in the cart
     updateSeatNumbers();
+
+    //  ----
+
+    // const selectedSeatColor = document.getElementById("total-ticket-selected");
   });
 }
 
@@ -58,22 +62,20 @@ function updateTotalCost(value) {
   return totalFinalPrice;
 }
 
-// -- update grand total --
+// -- coupon code || update grand total --
 function updateGrandTotal(codeApply) {
   let totalPrice = getConvertedValue("total-cost");
 
   const couponCode = document.getElementById("coupon-code").value;
 
-  if (codeApply) {
-    if (totalPrice === 2200 && couponCode === "NEW15") {
-      totalPrice = 2200 * 0.85;
-      document.getElementById("grand-total-cost").innerText = totalPrice;
-    }
+  if (totalPrice === 2200 && couponCode === "NEW15") {
+    totalPrice = 2200 * 0.85;
+    document.getElementById("grand-total-cost").innerText = totalPrice;
+  }
 
-    if (totalPrice === 1100 && couponCode === "Couple 20") {
-      totalPrice = 1100 * 0.8;
-      document.getElementById("grand-total-cost").innerText = totalPrice;
-    }
+  if (totalPrice === 1100 && couponCode === "Couple 20") {
+    totalPrice = 1100 * 0.8;
+    document.getElementById("grand-total-cost").innerText = totalPrice;
   }
 
   document.getElementById("grand-total-cost").innerText = totalPrice;
@@ -83,7 +85,7 @@ function updateGrandTotal(codeApply) {
 function updateSeatNumbers() {
   let chosenSeatNum = getConvertedValue("total-seat-selected");
   chosenSeatNum = chosenSeatNum + 1;
-  console.log(chosenSeatNum);
+  // console.log(chosenSeatNum);
   document.getElementById("total-seat-selected").innerText = chosenSeatNum;
 
   let totalSeatNum = getConvertedValue("total-seat-capacity");
@@ -91,9 +93,6 @@ function updateSeatNumbers() {
   totalSeatNum = 8 - chosenSeatNum;
   document.getElementById("total-seat-capacity").innerText = totalSeatNum;
 }
-
-// change bg color
-function changeBgColor(event) {}
 
 // === get a value from a class
 function getConvertedValue(id) {
