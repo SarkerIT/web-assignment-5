@@ -2,14 +2,12 @@
 
 const allSeat = document.getElementsByClassName("select-seat");
 
+//seat selection and showing in the cart table
 for (const seat of allSeat) {
   seat.addEventListener("click", function (event) {
-    // console.log(event.target.innerText);
-
     const selectedSeatNumbers = document.getElementById(
       "total-ticket-selected"
     ).innerText;
-    console.log(selectedSeatNumbers);
 
     const totalSelectedSeatDiv = document.getElementById(
       "total-ticket-selected"
@@ -36,10 +34,40 @@ for (const seat of allSeat) {
     newDiv.appendChild(p3);
 
     totalSelectedSeatDiv.appendChild(newDiv);
+
+    // --- total cost --
+    updateTotalCost("total-cost");
+
+    // -- grand total --
+    updateGrandTotal();
   });
 }
 
-// ===
+// update total price
+function updateTotalCost(value) {
+  const totalInitialPrice = getConvertedValue(value);
+
+  const totalFinalPrice = totalInitialPrice + 550;
+
+  document.getElementById("total-cost").innerText = totalFinalPrice;
+
+  return totalFinalPrice;
+}
+
+function updateGrandTotal(codeApply) {
+  const totalPrice = getConvertedValue("total-cost");
+  console.log(totalPrice);
+  document.getElementById("grand-total-cost").innerText = totalPrice;
+
+  const couponCode = document.getElementById("have-coupon").value;
+
+  if (totalPrice === 2200 && couponCode === "NEW15") {
+    totalPrice = 2200 * 0.85;
+  }
+  document.getElementById("grand-total-cost").innerText = totalPrice;
+}
+
+// === get a value from a class
 function getConvertedValue(id) {
   const idValue = parseInt(document.getElementById(id).innerText);
   return idValue;
