@@ -16,6 +16,7 @@ for (const seat of allSeat) {
     // const div = document.getElementById("total-ticket-selected");
     // div.classList.add("flex-row");
 
+    // set chosen ticket info on the fly
     const newDiv = document.createElement("div");
     newDiv.classList.add("flex");
     newDiv.classList.add("justify-between");
@@ -35,11 +36,14 @@ for (const seat of allSeat) {
 
     totalSelectedSeatDiv.appendChild(newDiv);
 
-    // --- total cost --
+    // --- call total cost --
     updateTotalCost("total-cost");
 
-    // -- grand total --
+    // -- call grand total --
     updateGrandTotal();
+
+    // call update seat num in the cart
+    updateSeatNumbers();
   });
 }
 
@@ -54,18 +58,42 @@ function updateTotalCost(value) {
   return totalFinalPrice;
 }
 
+// -- update grand total --
 function updateGrandTotal(codeApply) {
-  const totalPrice = getConvertedValue("total-cost");
-  console.log(totalPrice);
-  document.getElementById("grand-total-cost").innerText = totalPrice;
+  let totalPrice = getConvertedValue("total-cost");
 
-  const couponCode = document.getElementById("have-coupon").value;
+  const couponCode = document.getElementById("coupon-code").value;
 
-  if (totalPrice === 2200 && couponCode === "NEW15") {
-    totalPrice = 2200 * 0.85;
+  if (codeApply) {
+    if (totalPrice === 2200 && couponCode === "NEW15") {
+      totalPrice = 2200 * 0.85;
+      document.getElementById("grand-total-cost").innerText = totalPrice;
+    }
+
+    if (totalPrice === 1100 && couponCode === "Couple 20") {
+      totalPrice = 1100 * 0.8;
+      document.getElementById("grand-total-cost").innerText = totalPrice;
+    }
   }
+
   document.getElementById("grand-total-cost").innerText = totalPrice;
 }
+
+// update cart seat num in cart
+function updateSeatNumbers() {
+  let chosenSeatNum = getConvertedValue("total-seat-selected");
+  chosenSeatNum = chosenSeatNum + 1;
+  console.log(chosenSeatNum);
+  document.getElementById("total-seat-selected").innerText = chosenSeatNum;
+
+  let totalSeatNum = getConvertedValue("total-seat-capacity");
+
+  totalSeatNum = 8 - chosenSeatNum;
+  document.getElementById("total-seat-capacity").innerText = totalSeatNum;
+}
+
+// change bg color
+function changeBgColor(event) {}
 
 // === get a value from a class
 function getConvertedValue(id) {

@@ -241,7 +241,7 @@
             <div class="flex flex-col items-center justify-center">
               <img class="mb-6" src="images/fare.png" alt="" />
               <p class="text-3xl font-bold m-4">
-                <span id="per-ticket-price">550</span>Taka
+                <span id="per-ticket-price">550 </span>Taka
               </p>
               <p class="text-xl text-bold">Per Seat</p>
             </div>
@@ -371,6 +371,7 @@
                       Seat
                       <sup>
                         <button
+                          id="total-seat-selected"
                           class="btn btn-xs bg-green-500 text-white p-0 h-2 w-6 m-0 text-sm"
                         >
                           0
@@ -401,11 +402,12 @@
                     class="pl-4"
                     type="text"
                     name=""
-                    id=""
+                    id="coupon-code"
                     placeholder="Have any coupon?"
                   />
                   <button
-                    class="btn btn-primary px-8 bg-green-400 border-0 text-white"
+                    onclick="updateGrandTotal('apply-btn')"
+                    class="btn btn-primary apply-btn px-8 bg-green-400 border-0 text-white"
                   >
                     Apply
                   </button>
