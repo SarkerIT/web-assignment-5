@@ -197,7 +197,7 @@
                     class="btn btn-info bg-green-200 border-green-200 text-green-700 text-lg"
                   >
                     <img src="./images/seat-green.png" alt="" />
-                    40 Seats left
+                    <span id="total-seat-capacity">8 </span> Seats left
                   </button>
                 </div>
               </div>
@@ -238,7 +238,9 @@
             <div><img src="./images/info-devider.png" alt="" /></div>
             <div class="flex flex-col items-center justify-center">
               <img class="mb-6" src="images/fare.png" alt="" />
-              <p class="text-3xl font-bold m-4">550 Taka</p>
+              <p class="text-3xl font-bold m-4">
+                <span id="per-ticket-price">550</span>Taka
+              </p>
               <p class="text-xl text-bold">Per Seat</p>
             </div>
           </div>
@@ -294,18 +296,18 @@
                     <p class="pl-10">A</p>
                     <div class="flex gap-20">
                       <div class="left-seat-rows flex gap-10">
-                        <div class="" id="A1">
+                        <div class="select-seat" id="A1">
                           <button class="btn w-28 text-xl">A1</button>
                         </div>
-                        <div class="" id="A2">
+                        <div class="select-seat" id="A2">
                           <button class="btn w-28 text-xl">A2</button>
                         </div>
                       </div>
                       <div class="left-seat-rows flex gap-10">
-                        <div class="" id="A3">
+                        <div class="select-seat" id="A3">
                           <button class="btn w-28 text-xl">A3</button>
                         </div>
-                        <div class="" id="A4">
+                        <div class="select-seat" id="A4">
                           <button class="btn w-28 text-xl">A4</button>
                         </div>
                       </div>
@@ -319,18 +321,18 @@
                     <p class="pl-10">B</p>
                     <div class="flex gap-20">
                       <div class="left-seat-rows flex gap-10">
-                        <div class="" id="B1">
+                        <div class="select-seat" id="B1">
                           <button class="btn w-28 text-xl">B1</button>
                         </div>
-                        <div class="" id="B2">
+                        <div class="select-seat" id="B2">
                           <button class="btn w-28 text-xl">B2</button>
                         </div>
                       </div>
                       <div class="left-seat-rows flex gap-10">
-                        <div class="" id="B3">
+                        <div class="select-seat" id="B3">
                           <button class="btn w-28 text-xl">B3</button>
                         </div>
-                        <div class="" id="B4">
+                        <div class="select-seat" id="B4">
                           <button class="btn w-28 text-xl">B4</button>
                         </div>
                       </div>
@@ -359,9 +361,20 @@
               <hr class="my-6 border-dashed border-gray-500" />
               <div class="bg-gray-100 rounded-lg p-4">
                 <div
+                  id="seat-cart-list"
                   class="flex mx-auto w-full justify-between bg-gray-100 p-4 font-bold"
                 >
-                  <p>Seat</p>
+                  <p>
+                    Seat
+                    <sup>
+                      <button
+                        id="total-ticket-selected"
+                        class="btn btn-xs bg-green-500 text-white p-0 h-2 w-6 m-0 text-sm"
+                      >
+                        0
+                      </button></sup
+                    >
+                  </p>
                   <p>Class</p>
                   <p>Price</p>
                 </div>
