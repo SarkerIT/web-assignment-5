@@ -1,10 +1,5 @@
 // alert("loaded");
 
-// ==
-// let totalSeatingCapacity = getConvertedValue("total-seat-capacity");
-// let singleTicketPrice = getConvertedValue("per-ticket-price");
-// let totalTicketSelected = getConvertedValue("total-ticket-selected");
-
 const allSeat = document.getElementsByClassName("select-seat");
 
 for (const seat of allSeat) {
@@ -14,10 +9,18 @@ for (const seat of allSeat) {
     const selectedSeatNumbers = document.getElementById(
       "total-ticket-selected"
     ).innerText;
+    console.log(selectedSeatNumbers);
 
-    const totalSelectedSeatDiv = document.getElementById("seat-cart-list");
+    const totalSelectedSeatDiv = document.getElementById(
+      "total-ticket-selected"
+    );
 
-    const div = document.createElement("div");
+    // const div = document.getElementById("total-ticket-selected");
+    // div.classList.add("flex-row");
+
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("flex");
+    newDiv.classList.add("justify-between");
 
     const p1 = document.createElement("p");
     p1.innerText = event.target.innerText;
@@ -28,11 +31,11 @@ for (const seat of allSeat) {
     const p3 = document.createElement("p");
     p3.innerText = "550";
 
-    div.appendChild(p1);
-    div.appendChild(p2);
-    div.appendChild(p3);
+    newDiv.appendChild(p1);
+    newDiv.appendChild(p2);
+    newDiv.appendChild(p3);
 
-    totalSelectedSeatDiv.appendChild(div);
+    totalSelectedSeatDiv.appendChild(newDiv);
   });
 }
 

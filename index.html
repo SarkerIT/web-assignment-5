@@ -24,6 +24,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
 
     <title>P-Ticket</title>
   </head>
@@ -359,30 +361,41 @@
               <p class="text-3xl font-bold">Select Your Seat</p>
 
               <hr class="my-6 border-dashed border-gray-500" />
-              <div class="bg-gray-100 rounded-lg p-4">
+              <div class="flex flex-col bg-gray-100 rounded-lg p-4">
                 <div
                   id="seat-cart-list"
                   class="flex mx-auto w-full justify-between bg-gray-100 p-4 font-bold"
                 >
-                  <p>
-                    Seat
-                    <sup>
-                      <button
-                        id="total-ticket-selected"
-                        class="btn btn-xs bg-green-500 text-white p-0 h-2 w-6 m-0 text-sm"
+                  <div class="flex mx-auto w-full justify-between">
+                    <p>
+                      Seat
+                      <sup>
+                        <button
+                          class="btn btn-xs bg-green-500 text-white p-0 h-2 w-6 m-0 text-sm"
+                        >
+                          0
+                        </button></sup
                       >
-                        0
-                      </button></sup
-                    >
-                  </p>
-                  <p>Class</p>
-                  <p>Price</p>
+                    </p>
+                    <p>Class</p>
+                    <p>Price1</p>
+                  </div>
                 </div>
+                <hr class="my-6 border-dashed border-red-500" />
+                <!-- blank div  -->
+                <div
+                  id="total-ticket-selected"
+                  class="flex flex-col mx-auto w-full justify-between p-4"
+                ></div>
+
+                <!-- blank ends  -->
                 <hr class="my-6 border-dashed border-gray-500" />
+
                 <div class="flex justify-between font-bold my-4">
                   <p>Total</p>
                   <p>BDT</p>
                 </div>
+
                 <div class="flex justify-between bg-white py-2 px-2 rounded-lg">
                   <input
                     class="pl-4"
