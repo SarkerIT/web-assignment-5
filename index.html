@@ -163,7 +163,7 @@
 
       <!-- main seating and JS part  -->
       <div
-        class="container border-t-4 border-lime-400 rounded-t-3xl bg-slate-100 justify-center text-center p-32"
+        class="container border-t-4 border-lime-400 rounded-t-3xl bg-gray-50 justify-center text-center p-32"
       >
         <div class="text-div text-5xl font-extrabold">P.H Paribahan</div>
         <p class="text-xl my-4 max-w-[700px] mx-auto">
@@ -185,7 +185,7 @@
                     alt=""
                   />
 
-                  <div class="ml-4 justify-start text-left items-center">
+                  <div class="ml-4 justify-start text-left items-center mb-2">
                     <p class="text-3xl font-bold mb-2">Greenline Paribahan</p>
 
                     <p class="text-xl">Coach-009-WEB | AC-Business</p>
@@ -244,9 +244,208 @@
           </div>
 
           <!-- seat selection  -->
-          <div class="seat-selection">
-            <div class="select-your-seat-1"></div>
-            <div class="select-your-seat-2"></div>
+          <div
+            class="seat-selection flex justify-between bg-white mt-10 rounded-2xl"
+          >
+            <!-- left part -->
+            <div
+              class="select-your-seat-left-container w-3/5 border-r-2 border-r-gray-400 border-dashed m-4 pr-4"
+            >
+              <div>
+                <div class="text-left">
+                  <p class="text-3xl font-bold">Select Your Seat</p>
+                </div>
+                <hr class="my-6 border-dashed border-gray-500" />
+                <div class="flex justify-between">
+                  <div class="flex gap-2">
+                    <img class="h-6" src="./images/seat-gray.png" alt="" />
+                    <p>Available</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <img
+                      class="h-6"
+                      src="./images/seat-green-filled.png"
+                      alt=""
+                    />
+                    <p class="text-green-500">Selected</p>
+                  </div>
+                </div>
+                <hr class="my-6 border-dashed border-gray-500" />
+                <div class="flex justify-end">
+                  <button class="btn btn-full rounded-lg w-28 bg-gray-200">
+                    <img
+                      class="h-10"
+                      src="./images/steering.png"
+                      alt="Steering Wheel"
+                    />
+                  </button>
+                </div>
+                <!-- <hr class="my-6 border-dashed border-red-500" /> -->
+
+                <div>
+                  <button><img src="./images/" alt="" /></button>
+                </div>
+                <div class="individual-seats text-xl">
+                  <!-- row 1  -->
+                  <div
+                    class="row flex items-center text-center gap-24 mb-4"
+                    id="row-1"
+                  >
+                    <p class="pl-10">A</p>
+                    <div class="flex gap-20">
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="" id="A1">
+                          <button class="btn w-28 text-xl">A1</button>
+                        </div>
+                        <div class="" id="A2">
+                          <button class="btn w-28 text-xl">A2</button>
+                        </div>
+                      </div>
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="" id="A3">
+                          <button class="btn w-28 text-xl">A3</button>
+                        </div>
+                        <div class="" id="A4">
+                          <button class="btn w-28 text-xl">A4</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- row 2  -->
+                  <div
+                    class="row flex items-center text-center gap-24"
+                    id="row-1"
+                  >
+                    <p class="pl-10">B</p>
+                    <div class="flex gap-20">
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="" id="B1">
+                          <button class="btn w-28 text-xl">B1</button>
+                        </div>
+                        <div class="" id="B2">
+                          <button class="btn w-28 text-xl">B2</button>
+                        </div>
+                      </div>
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="" id="B3">
+                          <button class="btn w-28 text-xl">B3</button>
+                        </div>
+                        <div class="" id="B4">
+                          <button class="btn w-28 text-xl">B4</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row" id="row-2"></div>
+
+                  <!-- 
+                  <div class="row" id="row-3">3</div>
+                  <div class="row" id="row-4">4</div>
+                  <div class="row" id="row-5">5</div>
+                  <div class="row" id="row-6">6</div>
+                  <div class="row" id="row-7">7</div>
+                  <div class="row" id="row-8">8</div>
+                  <div class="row" id="row-9">9</div> -->
+                </div>
+              </div>
+            </div>
+            <!--  left end  
+              & 
+              Right Starts -->
+            <div class="select-your-seat-right w-2/5 text-left m-4">
+              <p class="text-3xl font-bold">Select Your Seat</p>
+
+              <hr class="my-6 border-dashed border-gray-500" />
+              <div class="bg-gray-100 rounded-lg p-4">
+                <div
+                  class="flex mx-auto w-full justify-between bg-gray-100 p-4 font-bold"
+                >
+                  <p>Seat</p>
+                  <p>Class</p>
+                  <p>Price</p>
+                </div>
+                <hr class="my-6 border-dashed border-gray-500" />
+                <div class="flex justify-between font-bold my-4">
+                  <p>Total</p>
+                  <p>BDT</p>
+                </div>
+                <div class="flex justify-between bg-white py-2 px-2 rounded-lg">
+                  <input
+                    class="pl-4"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Have any coupon?"
+                  />
+                  <button
+                    class="btn btn-primary px-8 bg-green-400 border-0 text-white"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+
+              <!-- name  -->
+              <div class="justify-between py-2 px-2 rounded-lg">
+                <p class="font-bold my-4">Passenger Name<sup>*</sup></p>
+                <div
+                  class="bg-white py-4 rounded-lg my-4 border border-gray-400"
+                >
+                  <input
+                    class="pl-4"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Enter Your Name"
+                  />
+                </div>
+                <!-- phone number  -->
+                <div class="justify-between py-2 px-2 rounded-lg">
+                  <p class="font-bold my-4">Phone Number<sup>*</sup></p>
+                  <div
+                    class="j bg-white py-4 rounded-lg my-4 border border-gray-400"
+                  >
+                    <input
+                      class="pl-4"
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Enter Your Phone"
+                    />
+                  </div>
+                </div>
+                <!-- email  -->
+                <div class="justify-between py-2 px-2 rounded-lg">
+                  <p class="font-bold my-4">Email<sup>*</sup></p>
+                  <div
+                    class="j bg-white py-4 rounded-lg my-4 border border-gray-400"
+                  >
+                    <input
+                      class="pl-4"
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Enter Your Email ID"
+                    />
+                  </div>
+                </div>
+                <!-- next button -->
+                <div>
+                  <button class="btn btn-success w-full text-xl text-white">
+                    Next
+                  </button>
+                </div>
+
+                <!-- cancellation policy  -->
+                <div class="flex justify-between my-4 underline">
+                  <p><a href="">Terms and Conditions</a></p>
+                  <p><a href="cancellation.html">Cancellation Policy</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- right ends -->
           </div>
         </div>
       </div>
