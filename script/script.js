@@ -1,5 +1,9 @@
 const codeButton = document.getElementById("code-apply");
 codeButton.disabled = true;
+
+const nextButton = document.getElementById("next-btn");
+nextButton.disabled = true;
+
 const allSeat = document.getElementsByClassName("select-seat-btn");
 
 //seat selection and showing in the cart table
@@ -52,7 +56,7 @@ for (const seat of allSeat) {
     // DISABLE seat and change bg-color on click
     //1. disable when clicked
     event.target.setAttribute("disabled", false);
-    //2. set bg-color when chicked
+    //2. set bg-color when clicked
     event.target.style.backgroundColor = "limegreen";
 
     // get the apply-coupon buttons enabled
@@ -61,8 +65,7 @@ for (const seat of allSeat) {
     }
     // ============================
     // NEXT button
-    const nextButton = document.getElementById("next-btn");
-    nextButton.disabled = true;
+
     // get phone number input and validate NEXT button
     let phoneNumber = "";
     const phoneId = document.getElementById("phone");
@@ -70,7 +73,7 @@ for (const seat of allSeat) {
     phoneId.addEventListener("input", function getPhone(event) {
       phoneNumber = event.target.value;
       // validate NEXT button inside (as I failed to get the input value outside current function)
-      if (phoneNumber > 100) {
+      if (phoneNumber > 99) {
         nextButton.disabled = false;
       }
     });
