@@ -413,7 +413,10 @@
                   <p>BDT <span id="total-cost" class="pl-10">0</span></p>
                 </div>
 
-                <div class="flex justify-between bg-white py-2 px-2 rounded-lg">
+                <div
+                  id="coupon-code-div"
+                  class="flex justify-between bg-white py-2 px-2 rounded-lg"
+                >
                   <input
                     class="pl-4"
                     type="text"
@@ -422,6 +425,7 @@
                     placeholder="Have any coupon?"
                   />
                   <button
+                    id="code-apply"
                     onclick="updateGrandTotal('apply-btn')"
                     class="btn btn-primary apply-btn px-8 bg-green-400 border-0 text-white"
                   >

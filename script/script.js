@@ -54,7 +54,7 @@ for (const seat of allSeat) {
     // const px = event.target.classList;
     // px.add("bg-green-300");
     // disable button
-    console.log(event.target.parentNode);
+    // console.log(event.target.parentNode);
     event.target.setAttribute("disabled", false);
     event.target.style.backgroundColor = "limegreen";
   });
@@ -74,17 +74,29 @@ function updateGrandTotal(codeApply) {
 
   const couponCode = document.getElementById("coupon-code").value;
 
-  if (totalPrice === 2200 && couponCode === "NEW15") {
-    totalPrice = 2200 * 0.85;
+  if (couponCode === "NEW15") {
+    totalPrice = totalPrice * 0.85;
     document.getElementById("grand-total-cost").innerText = totalPrice;
-  }
-
-  if (totalPrice === 1100 && couponCode === "Couple 20") {
-    totalPrice = 1100 * 0.8;
+    hideCouponDiv();
+  } else if (couponCode === "Couple 20") {
+    totalPrice = totalPrice * 0.8;
     document.getElementById("grand-total-cost").innerText = totalPrice;
+    hideCouponDiv();
   }
 
   document.getElementById("grand-total-cost").innerText = totalPrice;
+}
+
+// grand total div hiding
+function hideCouponDiv() {
+  const couponDiv = document.getElementById("coupon-code-div").classList;
+  couponDiv.add("hidden");
+
+  const grandTotalDiv = document.getElementById("grand-total").classList;
+  grandTotalDiv.add("bg-blue-100");
+  grandTotalDiv.add("rounded-lg");
+  grandTotalDiv.add("p-4");
+  grandTotalDiv.add("text-xl");
 }
 
 // === get a value from a class
