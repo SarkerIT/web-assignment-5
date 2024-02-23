@@ -1,12 +1,5 @@
-// alert("loaded");
-
-// get the apply-coupon code button disabled
 const codeButton = document.getElementById("code-apply");
 codeButton.disabled = true;
-
-const nextButton = document.getElementById("next-btn");
-nextButton.disabled = true;
-
 const allSeat = document.getElementsByClassName("select-seat-btn");
 
 //seat selection and showing in the cart table
@@ -56,28 +49,32 @@ for (const seat of allSeat) {
 
     updateGrandTotal("grand-total");
 
-    //  --- update bg-color upon selection
-    // const px = event.target.classList;
-    // px.add("bg-green-300");
-    // disable button
-    // console.log(event.target.parentNode);
+    // DISABLE seat and change bg-color on click
+    //1. disable when clicked
     event.target.setAttribute("disabled", false);
+    //2. set bg-color when chicked
     event.target.style.backgroundColor = "limegreen";
 
-    // get the Butttons enabled
+    // get the apply-coupon buttons enabled
     if (getConvertedValue("total-seat-selected") > 0) {
       codeButton.disabled = false;
     }
+    // ============================
+    // NEXT button
+    const nextButton = document.getElementById("next-btn");
+    nextButton.disabled = true;
+    // get phone number input and validate NEXT button
+    let phoneNumber = "";
+    const phoneId = document.getElementById("phone");
 
-    const phone = document.getElementById("phone").value;
-    console.log(phone);
-    if (
-      getConvertedValue("total-seat-selected") > 0 &&
-      document.getElementById("phone").addEventListener("mouseup").value
-        .length > 0
-    ) {
-      nextButton.disabled = false;
-    }
+    phoneId.addEventListener("input", function getPhone(event) {
+      phoneNumber = event.target.value;
+      // validate NEXT button inside (as I failed to get the input value outside current function)
+      if (phoneNumber > 100) {
+        nextButton.disabled = false;
+      }
+    });
+    //======================
   });
 }
 

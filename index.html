@@ -27,7 +27,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
 
-    <title>P-Ticket</title>
+    <title>Your Online Ticketing Platform</title>
   </head>
   <body class="mx-auto max-w-screen-2xl">
     <!-- header done -->
@@ -96,14 +96,53 @@
             </h1>
             <p class="mb-5 text-xl">
               Yes, you can run unit tests and view the results directly within
-              the app. The integrated testing features allow for a streamlined .
+              the app. The integrated testing features allow for a streamlined.
             </p>
-            <button
-              class="btn btn-lg btn-primary bg-green-500 text-xl text-black border border-green-500"
-            >
-              Buy Tickets
-            </button>
+            <a href="#seating-arrangement">
+              <button
+                class="btn btn-lg text-3xl btn-primary bg-green-500 text-black border border-green-500 mt-8"
+              >
+                Buy Tickets
+              </button>
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 mt-[-130px] gap-10 px-20">
+      <div
+        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[200px]"
+      >
+        <div class="col-span-1">
+          <img class="w-20 mr-4" src="./images/people.png" alt="" />
+        </div>
+        <div>
+          <p class="text-6xl font-bold my-5">500K+</p>
+          <p class="text-xl font-bold">Registered Users</p>
+        </div>
+      </div>
+
+      <div
+        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[200px]"
+      >
+        <div class="col-span-1">
+          <img class="w-20 mr-4" src="./images/ticket-cupon.png" alt="" />
+        </div>
+        <div>
+          <p class="text-6xl font-bold my-5">1.7 Lacs</p>
+          <p class="text-xl font-bold">Tickets Sold</p>
+        </div>
+      </div>
+
+      <div
+        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[200px]"
+      >
+        <div class="col-span-1">
+          <img class="w-20 mr-4" src="./images/stoppage.png" alt="" />
+        </div>
+        <div>
+          <p class="text-6xl font-bold my-5">80K+</p>
+          <p class="text-xl font-bold">Rental partners</p>
         </div>
       </div>
     </div>
@@ -255,7 +294,7 @@
             <div
               class="select-your-seat-left-container w-3/5 border-r-2 border-r-gray-400 border-dashed m-4 pr-4"
             >
-              <div>
+              <div id="seating-arrangement">
                 <div class="text-left">
                   <p class="text-3xl font-bold">Select Your Seat</p>
                 </div>
@@ -450,7 +489,7 @@
                   class="bg-white py-4 rounded-lg my-4 border border-gray-400"
                 >
                   <input
-                    class="pl-4"
+                    class="pl-4 w-full"
                     type="text"
                     name=""
                     id=""
@@ -464,11 +503,12 @@
                     class="j bg-white py-4 rounded-lg my-4 border border-gray-400"
                   >
                     <input
-                      class="pl-4"
+                      onmouseup=""
+                      class="pl-4 w-full"
                       type="number"
                       name=""
                       id="phone"
-                      placeholder="Enter Your Phone"
+                      placeholder="Enter Your Phone (three digits or more)"
                     />
                   </div>
                 </div>
@@ -479,7 +519,7 @@
                     class="j bg-white py-4 rounded-lg my-4 border border-gray-400"
                   >
                     <input
-                      class="pl-4"
+                      class="pl-4 w-full"
                       type="email"
                       name=""
                       id=""
