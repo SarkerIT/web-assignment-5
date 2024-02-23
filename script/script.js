@@ -1,5 +1,12 @@
 // alert("loaded");
 
+// get the apply-coupon code button disabled
+const codeButton = document.getElementById("code-apply");
+codeButton.disabled = true;
+
+const nextButton = document.getElementById("next-btn");
+nextButton.disabled = true;
+
 const allSeat = document.getElementsByClassName("select-seat-btn");
 
 //seat selection and showing in the cart table
@@ -56,6 +63,21 @@ for (const seat of allSeat) {
     // console.log(event.target.parentNode);
     event.target.setAttribute("disabled", false);
     event.target.style.backgroundColor = "limegreen";
+
+    // get the Butttons enabled
+    if (getConvertedValue("total-seat-selected") > 0) {
+      codeButton.disabled = false;
+    }
+
+    const phone = document.getElementById("phone").value;
+    console.log(phone);
+    if (
+      getConvertedValue("total-seat-selected") > 0 &&
+      document.getElementById("phone").addEventListener("mouseup").value
+        .length > 0
+    ) {
+      nextButton.disabled = false;
+    }
   });
 }
 
