@@ -47,8 +47,7 @@ for (const seat of allSeat) {
     // --- call total cost --
     updateTotalCost("total-cost");
 
-    // -- call grand total --
-    updateGrandTotal();
+    updateGrandTotal("grand-total");
 
     //  --- update bg-color upon selection
     // const px = event.target.classList;
@@ -72,8 +71,13 @@ function updateTotalCost(value) {
 function updateGrandTotal(codeApply) {
   let totalPrice = getConvertedValue("total-cost");
 
-  const couponCode = document.getElementById("coupon-code").value;
+  document.getElementById("grand-total-cost").innerText = totalPrice;
+}
 
+// Coupon code activate on click the button
+function codeApply() {
+  const couponCode = document.getElementById("coupon-code").value;
+  let totalPrice = getConvertedValue("total-cost");
   if (couponCode === "NEW15") {
     totalPrice = totalPrice * 0.85;
     document.getElementById("grand-total-cost").innerText = totalPrice;
@@ -82,9 +86,9 @@ function updateGrandTotal(codeApply) {
     totalPrice = totalPrice * 0.8;
     document.getElementById("grand-total-cost").innerText = totalPrice;
     hideCouponDiv();
+  } else {
+    alert("Please Enter a valid code");
   }
-
-  document.getElementById("grand-total-cost").innerText = totalPrice;
 }
 
 // grand total div hiding
