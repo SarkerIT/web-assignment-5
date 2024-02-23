@@ -5,16 +5,11 @@ const allSeat = document.getElementsByClassName("select-seat");
 //seat selection and showing in the cart table
 for (const seat of allSeat) {
   seat.addEventListener("click", function (event) {
-    const selectedSeatNumbers = document.getElementById(
-      "total-ticket-selected"
-    ).innerText;
+    // let number = 4;
 
     const totalSelectedSeatDiv = document.getElementById(
       "total-ticket-selected"
     );
-
-    // const div = document.getElementById("total-ticket-selected");
-    // div.classList.add("flex-row");
 
     // set chosen ticket info on the fly
     const newDiv = document.createElement("div");
@@ -45,9 +40,10 @@ for (const seat of allSeat) {
     // call update seat num in the cart
     updateSeatNumbers();
 
-    //  ----
-
-    // const selectedSeatColor = document.getElementById("total-ticket-selected");
+    //  --- update bg-color upon selection
+    const px = event.target.classList;
+    console.log(px);
+    px.add("bg-green-300");
   });
 }
 
