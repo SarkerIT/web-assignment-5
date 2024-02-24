@@ -29,7 +29,7 @@
 
     <title>Your Online Ticketing Platform</title>
   </head>
-  <body class="mx-auto max-w-screen-2xl">
+  <body class="mx-auto lg:max-w-screen-2xl">
     <!-- header done -->
     <header class="my-4">
       <div class="navbar bg-base-100">
@@ -89,8 +89,8 @@
       >
         <div class="hero-overlay bg-opacity-30 rounded-3xl"></div>
         <div class="hero-content text-center text-neutral-content">
-          <div class="w-[700px] leading-loose space-y-4 mb-56">
-            <h1 class="text-6xl font-bold">
+          <div class="lg:w-[700px] leading-loose space-y-4 mb-56">
+            <h1 class="text-5xl lg:text-6xl font-bold">
               End-to-End Travel With <br />
               <span class="text-green-600">P Paribahan</span>
             </h1>
@@ -100,7 +100,7 @@
             </p>
             <a href="#seating-arrangement">
               <button
-                class="btn btn-lg text-3xl btn-primary bg-green-500 text-black border border-green-500 mt-8"
+                class="btn lg:btn-lg text-3xl btn-primary bg-green-500 text-black border border-green-500 mt-8"
               >
                 Buy Tickets
               </button>
@@ -109,52 +109,56 @@
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-3 mt-[-130px] gap-10 px-20">
+    <div class="grid grid-cols-3 mt-[-130px] gap-2 lg:gap-10 lg:px-20">
       <div
-        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[200px]"
+        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[150px] lg:h-[200px] sm:mx-1"
       >
         <div class="col-span-1">
-          <img class="w-20 mr-4" src="./images/people.png" alt="" />
+          <img class="w-16 lg:w-20 mr-4" src="./images/people.png" alt="" />
         </div>
         <div>
-          <p class="text-6xl font-bold my-5">500K+</p>
-          <p class="text-xl font-bold">Registered Users</p>
+          <p class="text-3xl lg:text-6xl font-bold my-5">500K+</p>
+          <p class="text-md lg:text-xl font-bold">Registered Users</p>
         </div>
       </div>
 
       <div
-        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[200px]"
+        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[150px] lg:h-[200px] sm:mx-1"
       >
         <div class="col-span-1">
-          <img class="w-20 mr-4" src="./images/ticket-cupon.png" alt="" />
+          <img
+            class="w-16 lg:w-20 mr-4"
+            src="./images/ticket-cupon.png"
+            alt=""
+          />
         </div>
         <div>
-          <p class="text-6xl font-bold my-5">1.7 Lacs</p>
-          <p class="text-xl font-bold">Tickets Sold</p>
+          <p class="text-3xl lg:text-6xl font-bold my-5">1.7 Lacs</p>
+          <p class="text-md lg:text-xl font-bold">Tickets Sold</p>
         </div>
       </div>
 
       <div
-        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[200px]"
+        class="flex bg-gray-100 items-center justify-center rounded-3xl border-b-4 border-green-400 h-[150px] lg:h-[200px] sm:mx-1"
       >
         <div class="col-span-1">
-          <img class="w-20 mr-4" src="./images/stoppage.png" alt="" />
+          <img class="w-16 lg:w-20 mr-4" src="./images/stoppage.png" alt="" />
         </div>
         <div>
-          <p class="text-6xl font-bold my-5">80K+</p>
-          <p class="text-xl font-bold">Rental partners</p>
+          <p class="text-3xl lg:text-6xl font-bold my-5">80K+</p>
+          <p class="text-md lg:text-xl font-bold">Rental partners</p>
         </div>
       </div>
     </div>
     <main>
       <!-- best offer for you done -->
-      <div class="mt-40 mb-16 text-center text-4xl font-bold">
+      <div class="mt-20 lg:mt-40 mb-16 text-center text-4xl font-bold">
         Best offers for you
       </div>
 
       <!-- coupons done  -->
       <div
-        class="grid grid-cols-2 gap-6 h-32 text-center justify-center items-center mx-auto"
+        class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 text-center justify-center items-center sm:mx-2 mx-auto"
       >
         <div class="flex bg-orange-400 rounded-3xl items-center">
           <div class="w-[450px] p-10 text-center">
@@ -204,38 +208,44 @@
 
       <!-- main seating and JS part  -->
       <div
-        class="container border-t-4 border-lime-400 rounded-t-3xl bg-gray-50 justify-center text-center p-32"
+        class="container border-t-8 border-green-500 rounded-t-3xl bg-gray-50 justify-center text-center p-0 pt-4 lg:p-32"
       >
         <div class="text-div text-5xl font-extrabold">P.H Paribahan</div>
         <p class="text-xl my-4 max-w-[700px] mx-auto">
           Yes, you can book seats through our online booking app. To keep
           updated please consider sign up for pur exclusive deals as well.
         </p>
-        <div class="ticket-template-and-seat-selection">
+        <div class="ticket-template-and-seat-selection sm:my-10">
           <!-- ticket template done -->
           <div
-            class="ticket-template flex items-center justify-center bg-white rounded-2xl"
+            class="ticket-template flex lg:flex-row items-center justify-center bg-white rounded-2xl"
           >
             <!-- ticket 1st part  -->
-            <div class="w-2/3 bg-white-50 flex flex-col justify-between">
+            <div class="lg:w-2/3 bg-white-50 flex flex-col justify-between">
               <div class="flex justify-between items-center">
                 <div class="flex flex-row items-center">
                   <img
-                    class="h-12 items-center justify-center"
+                    class="h-6 lg:h-12 items-center justify-center"
                     src="images/bus-logo.png"
                     alt=""
                   />
 
-                  <div class="ml-4 justify-start text-left items-center mb-2">
-                    <p class="text-3xl font-bold mb-2">Greenline Paribahan</p>
+                  <div
+                    class="ml-4 justify-start text-left items-center sm:my-6 lg:mb-2"
+                  >
+                    <p class="text-xl lg:text-3xl font-bold mb-2">
+                      Greenline Paribahan
+                    </p>
 
-                    <p class="text-xl">Coach-009-WEB | AC-Business</p>
+                    <p class="text-sm lg:text-xl">
+                      Coach-009-WEB | AC-Business
+                    </p>
                   </div>
                 </div>
 
                 <div>
                   <button
-                    class="btn btn-info bg-green-200 border-green-200 text-green-700 text-lg"
+                    class="btn btn-info bg-green-200 border-green-200 text-green-700 text-sm lg:text-lg"
                   >
                     <img src="./images/seat-green.png" alt="" />
                     <span id="total-seat-capacity">8 </span> Seats left
@@ -243,7 +253,7 @@
                 </div>
               </div>
 
-              <!--  -->
+              <!--route  -->
 
               <div class="bg-slate-100 rounded-2xl">
                 <div
@@ -260,15 +270,17 @@
                   <p>9:00 pm</p>
                 </div>
                 <hr class="border-dashed border-gray-600" />
-                <div class="my-6 flex justify-between mx-4">
-                  <button class="btn btn-wide bg-gray-300 font-bold">
+                <div
+                  class="my-6 flex flex-col lg:flex-row justify-between mx-4"
+                >
+                  <button class="btn btn-lg lg:btn-wide bg-gray-300 font-bold">
                     Boarding Point - Laxmipur
                   </button>
-                  <button class="btn btn-wide bg-gray-300 font-bold">
+                  <button class="btn btn-lg lg:btn-wide bg-gray-300 font-bold">
                     Dropping Point - Bogra
                   </button>
 
-                  <button class="btn btn-wide bg-gray-300 font-bold">
+                  <button class="btn btn-lg lg:btn-wide bg-gray-300 font-bold">
                     Est. Time - 11 Hours
                   </button>
                 </div>
@@ -276,7 +288,9 @@
             </div>
 
             <!-- ticket 2nd part  -->
-            <div><img src="./images/info-devider.png" alt="" /></div>
+            <div>
+              <img class="h-[498px]" src="./images/info-devider.png" alt="" />
+            </div>
             <div class="flex flex-col items-center justify-center">
               <img class="mb-6" src="images/fare.png" alt="" />
               <p class="text-3xl font-bold m-4">
@@ -288,15 +302,15 @@
 
           <!-- seat selection  -->
           <div
-            class="seat-selection flex justify-between bg-white mt-10 rounded-2xl"
+            class="seat-selection flex lg:flex-row sm:flex-col justify-between bg-white mt-10 rounded-2xl sm:border sm:border-red-400"
           >
             <!-- left part -->
             <div
-              class="select-your-seat-left-container w-3/5 border-r-2 border-r-gray-400 border-dashed m-4 pr-4"
+              class="select-your-seat-left-container sm:border sm:border-violet-400 w-full lg:w-3/5 sm:p2 lg:border-r-2 lg:border-r-gray-400 border-dashed"
             >
               <div id="seating-arrangement">
-                <div class="text-left">
-                  <p class="text-3xl font-bold">Select Your Seat</p>
+                <div class="text-left sm:ml-4">
+                  <p class="text-xl lg:text-3xl font-bold">Select Your Seat</p>
                 </div>
                 <hr class="my-6 border-dashed border-gray-500" />
                 <div class="flex justify-between">
@@ -315,47 +329,54 @@
                 </div>
                 <hr class="my-6 border-dashed border-gray-500" />
                 <div class="flex justify-end">
-                  <button class="btn btn-full rounded-lg w-28 bg-gray-200">
+                  <button
+                    class="btn btn-full rounded-lg w-20 lg:w-28 bg-gray-200"
+                  >
                     <img
-                      class="h-10"
+                      class="h-4 lg:h-10"
                       src="./images/steering.png"
                       alt="Steering Wheel"
                     />
                   </button>
                 </div>
-                <!-- <hr class="my-6 border-dashed border-red-500" /> -->
 
-                <div>
-                  <button><img src="./images/" alt="" /></button>
-                </div>
-                <div class="individual-seats text-xl">
+                <div class="individual-seats text-xl bg-blue-200 my-4">
+                  <!-- class="select-your-seat-left-container sm:border sm:border-violet-400 w-full lg:w-3/5 sm:p2 lg:border-r-2 lg:border-r-gray-400 border-dashed" -->
                   <!-- row 1  -->
                   <div
-                    class="row flex items-center text-center gap-24 mb-4"
-                    id="row-1"
+                    class="row flex items-center text-center gap-2 lg:gap-24 mb-2 lg:mb-4 justify-around"
+                    id="row-2"
                   >
-                    <p class="pl-10">A</p>
+                    <p class="lg:pl-10 text-sm lg:text-xl">A</p>
                     <div class="flex gap-20">
                       <div class="left-seat-rows flex gap-10">
                         <div class="select-seat" id="A1">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             A1
                           </button>
                         </div>
                         <div class="select-seat" id="A2">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             A2
                           </button>
                         </div>
                       </div>
                       <div class="left-seat-rows flex gap-10">
                         <div class="select-seat" id="A3">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             A3
                           </button>
                         </div>
                         <div class="select-seat" id="A4">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             A4
                           </button>
                         </div>
@@ -364,31 +385,39 @@
                   </div>
                   <!-- row 2  -->
                   <div
-                    class="row flex items-center text-center gap-24"
-                    id="row-1"
+                    class="row flex items-center text-center gap-2 lg:gap-24 mb-2 lg:mb-4 justify-around"
+                    id="row-2"
                   >
-                    <p class="pl-10">B</p>
+                    <p class="lg:pl-10 text-sm lg:text-xl">B</p>
                     <div class="flex gap-20">
                       <div class="left-seat-rows flex gap-10">
                         <div class="select-seat" id="B1">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             B1
                           </button>
                         </div>
                         <div class="select-seat" id="B2">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             B2
                           </button>
                         </div>
                       </div>
                       <div class="left-seat-rows flex gap-10">
                         <div class="select-seat" id="B3">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             B3
                           </button>
                         </div>
                         <div class="select-seat" id="B4">
-                          <button class="btn select-seat-btn w-28 text-xl">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
                             B4
                           </button>
                         </div>
@@ -396,7 +425,7 @@
                     </div>
                   </div>
 
-                  <div class="row" id="row-2"></div>
+                  <!-- <div class="row" id="row-2"></div> -->
 
                   <!-- 
                   <div class="row" id="row-3">3</div>
@@ -412,8 +441,9 @@
             <!--  left end  
               & 
               Right Starts -->
-            <div class="select-your-seat-right w-2/5 text-left m-4">
-              <p class="text-3xl font-bold">Select Your Seat</p>
+
+            <div class="select-your-seat-right sm:w-full w-2/5 text-left">
+              <p class="text-3xl font-bold pl-4">Select Your Seat</p>
 
               <hr class="my-6 border-dashed border-gray-500" />
               <div class="flex flex-col bg-gray-100 rounded-lg p-4">
@@ -572,7 +602,7 @@
     </main>
 
     <!-- footer  done  -->
-    <footer class="bg-black text-white p-20">
+    <footer class="bg-black text-white p-4 lg:p-20">
       <div class="flex items-center justify-between my-12">
         <div class="mx-w-[100px]">
           <h1 class="text-2xl font-bold">P-Ticket</h1>
@@ -580,20 +610,22 @@
             P-ticket is a digital platform to meet your daily commuting better.
           </p>
         </div>
-        <div>
+        <div class="sm:flex flex-col">
           <div>Download our app</div>
 
-          <button class="btn border bg-black border-white text-white my-4">
-            <div>
-              <img src="./images/playstore.png" alt="" />
-            </div>
-            <div class="items-center text-center mx-auto">
-              <p>
-                GET IT ON <br />
-                <span class="txt-3xl text-bold">Google Play</span>
-              </p>
-            </div>
-          </button>
+          <div class="flex">
+            <button class="btn border bg-black border-white text-white my-4">
+              <div>
+                <img src="./images/playstore.png" alt="" />
+              </div>
+              <div class="items-center text-center mx-auto">
+                <p>
+                  GET IT ON <br />
+                  <span class="txt-3xl text-bold">Google Play</span>
+                </p>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       <hr class="my-6 border-dashed" />
