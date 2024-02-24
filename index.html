@@ -302,23 +302,23 @@
 
           <!-- seat selection  -->
           <div
-            class="seat-selection flex lg:flex-row sm:flex-col justify-between bg-white mt-10 rounded-2xl sm:border sm:border-red-400"
+            class="seat-selection flex lg:flex-row sm:flex-col justify-between bg-white mt-10 rounded-2xl sm:border"
           >
             <!-- left part -->
             <div
-              class="select-your-seat-left-container sm:border sm:border-violet-400 w-full lg:w-3/5 sm:p2 lg:border-r-2 lg:border-r-gray-400 border-dashed"
+              class="select-your-seat-left-container w-full lg:w-3/5 sm:p2 lg:border-r-2 lg:border-r-gray-400 border-dashed my-4"
             >
               <div id="seating-arrangement">
                 <div class="text-left sm:ml-4">
                   <p class="text-xl lg:text-3xl font-bold">Select Your Seat</p>
                 </div>
-                <hr class="my-6 border-dashed border-gray-500" />
+                <hr class="my-6 border-dashed border-gray-500 m-4" />
                 <div class="flex justify-between">
-                  <div class="flex gap-2">
+                  <div class="flex gap-2 ml-4">
                     <img class="h-6" src="./images/seat-gray.png" alt="" />
                     <p>Available</p>
                   </div>
-                  <div class="flex gap-2">
+                  <div class="flex gap-2 mr-4">
                     <img
                       class="h-6"
                       src="./images/seat-green-filled.png"
@@ -327,10 +327,10 @@
                     <p class="text-green-500">Selected</p>
                   </div>
                 </div>
-                <hr class="my-6 border-dashed border-gray-500" />
-                <div class="flex justify-end">
+                <hr class="my-6 border-dashed border-gray-500 mx-4" />
+                <div class="flex justify-end pr-20 lg:p-0 mr-4">
                   <button
-                    class="btn btn-full rounded-lg w-20 lg:w-28 bg-gray-200"
+                    class="btn btn-full rounded-lg w-20 lg:w-28 bg-gray-200 mb-6 lg:mb-0"
                   >
                     <img
                       class="h-4 lg:h-10"
@@ -340,8 +340,7 @@
                   </button>
                 </div>
 
-                <div class="individual-seats text-xl bg-blue-200 my-4">
-                  <!-- class="select-your-seat-left-container sm:border sm:border-violet-400 w-full lg:w-3/5 sm:p2 lg:border-r-2 lg:border-r-gray-400 border-dashed" -->
+                <div class="individual-seats text-xl my-4 mr-4">
                   <!-- row 1  -->
                   <div
                     class="row flex items-center text-center gap-2 lg:gap-24 mb-2 lg:mb-4 justify-around"
@@ -424,17 +423,91 @@
                       </div>
                     </div>
                   </div>
+                  <!-- ===== C ====== -->
 
-                  <!-- <div class="row" id="row-2"></div> -->
-
-                  <!-- 
-                  <div class="row" id="row-3">3</div>
-                  <div class="row" id="row-4">4</div>
-                  <div class="row" id="row-5">5</div>
-                  <div class="row" id="row-6">6</div>
-                  <div class="row" id="row-7">7</div>
-                  <div class="row" id="row-8">8</div>
-                  <div class="row" id="row-9">9</div> -->
+                  <div
+                    class="row flex items-center text-center gap-2 lg:gap-24 mb-2 lg:mb-4 justify-around"
+                    id="row-2"
+                  >
+                    <p class="lg:pl-10 text-sm lg:text-xl">C</p>
+                    <div class="flex gap-20">
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="select-seat" id="C1">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            C1
+                          </button>
+                        </div>
+                        <div class="select-seat" id="C2">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            C2
+                          </button>
+                        </div>
+                      </div>
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="select-seat" id="C3">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            C3
+                          </button>
+                        </div>
+                        <div class="select-seat" id="C4">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            C4
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ==== D=== -->
+                  <!-- row 1  -->
+                  <div
+                    class="row flex items-center text-center gap-2 lg:gap-24 mb-2 lg:mb-4 justify-around"
+                    id="row-2"
+                  >
+                    <p class="lg:pl-10 text-sm lg:text-xl">D</p>
+                    <div class="flex gap-20">
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="select-seat" id="D1">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            D1
+                          </button>
+                        </div>
+                        <div class="select-seat" id="D2">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            D2
+                          </button>
+                        </div>
+                      </div>
+                      <div class="left-seat-rows flex gap-10">
+                        <div class="select-seat" id="D3">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            D3
+                          </button>
+                        </div>
+                        <div class="select-seat" id="D4">
+                          <button
+                            class="btn btn-sm lg:btn-lg select-seat-btn lg:w-28 lg:text-xl"
+                          >
+                            D4
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ========= -->
                 </div>
               </div>
             </div>
@@ -442,11 +515,11 @@
               & 
               Right Starts -->
 
-            <div class="select-your-seat-right sm:w-full w-2/5 text-left">
+            <div class="select-your-seat-right sm:w-full w-2/5 text-left my-4">
               <p class="text-3xl font-bold pl-4">Select Your Seat</p>
 
-              <hr class="my-6 border-dashed border-gray-500" />
-              <div class="flex flex-col bg-gray-100 rounded-lg p-4">
+              <hr class="my-6 border-dashed border-gray-500 mx-4" />
+              <div class="flex flex-col bg-gray-100 rounded-lg p-4 m-4">
                 <div
                   id="seat-cart-list"
                   class="flex mx-auto w-full justify-between bg-gray-100 p-4 font-bold"
@@ -467,7 +540,7 @@
                     <p>Price</p>
                   </div>
                 </div>
-                <hr class="my-6 border-dashed border-red-500" />
+                <hr class="my-6 border-dashed border-gray-500" />
                 <!-- blank div  -->
                 <div
                   id="total-ticket-selected"
